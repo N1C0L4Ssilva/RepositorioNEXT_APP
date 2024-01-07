@@ -1,6 +1,12 @@
 import style from "./style.module.css"
 const Funcionario:React.FC=()=>{
     return(
-        "<div>Funcionario</div>"
+        <body>
+            <head>
+                <title>TEXTE</title>
+            </head>
+            <div>Funcionario</div>
+        </body>
     );
 } 
+export default Funcionario

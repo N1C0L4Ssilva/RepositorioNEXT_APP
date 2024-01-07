@@ -1,0 +1,112 @@
+.nav{
+    height:100px;
+    background-color: #FFE458;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.nav .SearchBar{position: absolute;}
+.SearchBar input{
+    outline: none;
+    width: 350px;
+    height: 25px;
+    padding: 0 30px 0 5px;
+    border: 1px solid #000000;
+}
+.SearchBar div{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    border-left: 2px solid #999999;
+    top: 2.5px;
+    right:2.5px;
+    background-image: url("../../public/Lupa.png");
+}
+
+.Carrinho div{
+    width: 100%;
+    height: 100%;
+    content: url("../../public/Conta.png");
+}
+.Carrinho{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;right: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #edd34f;
+}
+.Carrinho input{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #edd34f;
+    opacity: 0;
+}
+.Carrinho input:checked ~ div{
+    content: url("../../public/Conta_Fechar.png");
+    
+}
+.Carrinho:has(input:checked) ~ .BotoesConta{
+    display: flex;
+}
+
+.Home img{
+    width: 100%;
+    height: 100%;
+}
+.Home{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;left: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #edd34f;
+}
+.Home div{background-image: url("../../public/Home.png");}
+
+.BotoesConta{
+    background-color: #F5DB55;
+    width: 160px;
+    height: 160px;
+    z-index: 1;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    border-radius: 10px;
+}
+.BotoesConta button{
+    width: 140px;
+    height: 40px;
+    background-color: #DEC74D;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:480px){
+    .Home{
+        top: 20px;
+        left: 20px;
+    }
+    .Carrinho{
+        top: 20px;
+        right: 20px;
+    }
+    .nav .SearchBar{
+        bottom: 20px;
+    }
+    .nav{
+        height: 110px;
+    }
+}

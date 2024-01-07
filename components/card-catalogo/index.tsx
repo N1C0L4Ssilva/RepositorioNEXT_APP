@@ -1,12 +1,12 @@
 import style from "./style.module.css"
-const Armazem:React.FC=()=>{
+const cardcatalogo:React.FC=()=>{
     return(
         <body>
             <head>
                 <title>TEXTE</title>
             </head>
-            <div>Armazem</div>
+            <div>cardcatalogo</div>
         </body>
     );
 } 
-export default Armazem
+export default cardcatalogo

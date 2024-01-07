@@ -1,6 +1,12 @@
 import style from "./style.module.css"
 const Catalogo:React.FC=()=>{
     return(
-        "<div>CATALOGO</div>"
+        <body>
+            <head>
+                <title>TEXTE</title>
+            </head>
+            <div>CATALOGO</div>
+        </body>
     );
 } 
+export default Catalogo

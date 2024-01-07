@@ -1,6 +1,12 @@
 import style from "./style.module.css"
 const Valores:React.FC=()=>{
     return(
-        "<div>Valores</div>"
+        <body>
+            <head>
+                <title>TEXTE</title>
+            </head>
+            <div>Valores</div>
+        </body>
     );
 } 
+export default Valores
