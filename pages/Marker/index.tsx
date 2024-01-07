@@ -1,31 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "./style.module.css"
 import SearchBar from "../../components/search-bar"
 import FooterBar from '../../components/footer-bar';
 import Head from 'next/head';
 const Marker:React.FC=()=>{
-    useEffect(() => {},[])
+    const [MARCADORES, setMARCADORES] = useState<string[]>(["."]);
+    useEffect(() => {
+        fetch("/api/Produto/?TYPEFIND=MARKER")
+        .then(res => res.json())
+        .then((v)=>{setMARCADORES(v)})
+    },[])
     return(
         <div>
             <Head>
                 <title>MARKER</title>
             </Head>
             <SearchBar/>
-            {/* <div class="Catalogo">
-                <div class="MarkerCatalogo"> 
-                    <span class="TextoMarcador"> MARCADORES </span>
+            <div className={style.Catalogo}>
+                <div className={style.MarkerCatalogo}>
+                    <span className={style.TextoMarcador}> MARCADORES </span>
                     <div>
-                        <!-- <CardMarcadoresComponent></CardMarcadoresComponent> -->
-                        <div *ngFor="let I of MARCADORES" class="card_mark">
-                            <img src="../../assets/NoItem.png" alt="">
-                            <span class="TextoSeNaoImg"></span>
-                            <span class="Titulo">{{I}}</span>
-                            <a (click)="Encaminhar(I)">Ver Produtos</a>
+                    {MARCADORES.map((I, index) => (
+                        <div key={index} className={style.card_mark}>
+                        <img src="../../public/NoItem.png" alt="" />
+                        <span className={style.TextoSeNaoImg}></span>
+                        <span className={style.Titulo}>{I}</span>
+                        <a>Ver Produtos</a>
                         </div>
+                    ))}
                     </div>
                 </div>
             </div>
-            <app-footer-bar></app-footer-bar> */}
             <FooterBar/>
         </div>
     );

@@ -1,0 +1,151 @@
+.Catalogo,
+.CardNews,
+.nav, 
+.footer{
+    width: calc(100% - 300px);
+    margin-left: 150px;
+}
+
+/* MARCADOR */
+.MarkerCatalogo{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    /* border: 1px solid black; */
+    width: 100%;
+}
+.MarkerCatalogo .TextoMarcador{
+    position: relative;
+    height: 20px;
+    width: fit-content;
+    top: -12.5px;
+    left: 10px;
+    padding: 0 10px;
+    color: black;
+    font-family: math;
+    background-color: var(--CorDeFundo);
+}
+.MarkerCatalogo > div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.MarkerCatalogo div::-webkit-scrollbar{
+    width: 5px;
+}
+.Catalogo .MarkerCatalogo{margin-top:65px;}
+
+/* CARD */
+.card{
+    margin: 5px 0px 5px 7px;
+    position: relative;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgb(0,0,0,.5);
+    width: 150px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.card img{width: 150px;height: 150px;}
+.card img ~ .TextoSeNaoImg{display: none;}
+.card .TextoSeNaoImg{
+    width: 150px;
+    height: 150px;
+    border: 1px dashed gray;
+    text-align: center;
+}
+.card .Valor{
+    color: green;
+    font-family: cursive;
+}
+.card .DescontoQuant{
+    color: green;
+    font-size: 75%;
+    font-family: cursive;
+}
+.card .Promocao{
+    color: green;
+    font-family: cursive;
+}
+.card .Promocao ~ .Valor{
+    color: rgb(128, 0, 0);
+    font-size: 75%;
+    font-family: cursive;
+}
+.card .Promocao ~ .Valor::after{
+    content: "";
+    position: relative;
+    display: flex;
+    bottom: 8.5px;
+    width: 25px;
+    height: 2px;
+    background-color: red;
+    transform: rotate(10deg);
+}
+.card .Esgotado{
+    position: absolute;
+    width:calc(100% - 10px);
+    height:calc(100% - 10px);
+    background-color:rgb(127,127,127,.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index:1;
+}
+.card .Esgotado span{
+    transform: rotate(335deg);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+.card a{
+    width: 75%;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: wheat;
+    padding: 3px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD MARK */
+.card_mark{
+    margin: 5px 0px 5px 7px;
+    position: relative;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgb(0,0,0,.5);
+    width: 150px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.card_mark img{width: 150px;height: 150px;}
+.card_mark img ~ .TextoSeNaoImg{display: none;}
+.card_mark .TextoSeNaoImg{
+    width: 150px;
+    height: 150px;
+    border: 1px dashed gray;
+    text-align: center;
+}
+.card_mark a{
+    width: 75%;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: wheat;
+    padding: 3px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

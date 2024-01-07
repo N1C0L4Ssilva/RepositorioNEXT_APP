@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import style from "./style.module.css"
+import Link from "next/link";
 const searchbar:React.FC=()=>{
     useEffect(() => {},[])
     return(
@@ -8,13 +9,13 @@ const searchbar:React.FC=()=>{
                 <input id="InputSearch" type="text"/>
                 <div></div>
             </div>
-             <div className={style.Carrinho}>
+            <Link href="" className={style.Carrinho}>
                 <input type="checkbox" name="" id=""/>
                 <div></div>
-            </div>
-            <a href="" className={style.Home}>
+            </Link>
+            <Link href="/Marker" className={style.Home}>
                 <div></div>
-            </a>
+            </Link>
             <div className={style.BotoesConta}>
                 <button>CONTA</button>
                 <button>CARRINHO</button>
