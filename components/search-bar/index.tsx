@@ -1,13 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import style from "./style.module.css"
 import Link from "next/link";
+import { useRouter } from "next/router";
 const searchbar:React.FC=()=>{
+    const router = useRouter();
+    const [Search,SetSearch]=useState("")
     useEffect(() => {},[])
+    const Pesquisar=()=>{
+        router.push(`/Search?SEARCH=${Search}`)
+    }
     return(
         <nav className={style.nav}>
             <div className={style.SearchBar}>
-                <input id="InputSearch" type="text"/>
-                <div></div>
+                <input value={Search} onChange={(Ev)=>{SetSearch(Ev.target.value)}} type="text"/>
+                <div onClick={Pesquisar}></div>
             </div>
              <div className={style.Carrinho}>
                 <input type="checkbox" name="" id=""/>

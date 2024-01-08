@@ -15,8 +15,6 @@ const Catalogo:React.FC=()=>{
   const [ITENS,setITENS]=useState<string[]>([])
   useEffect(() => {
     valorRecebido=router.query.MARKER
-    console.log("UseEffect")
-    console.log(valorRecebido,router.query.MARKER,router.query)
     if(valorRecebido){
       fetch(`/api/Produto?${stringify({
         TYPEFIND:'ITEM_BY_MARKER',

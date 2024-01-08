@@ -33,5 +33,5 @@ const Marker:React.FC=()=>{
             <FooterBar/>
         </div>
     );
-} 
+}
 export default Marker

@@ -18,6 +18,7 @@ export default class{
   constructor(){}
 
   async Iniciar(){
+    return
     console.log("START CONNECTIONS")
     // START ListaCalledSs
     if (ListaCalled.GetCarrinho().length==0){

@@ -1,12 +1,15 @@
 import style from "./style.module.css"
+import SearchBar from "../../components/search-bar";
+import FooterBar from "../../components/footer-bar";
+import Head from "next/head";
 const CarrinhoS:React.FC=()=>{
     return(
-        <body>
-            <head>
-                <title>TEXTE</title>
-            </head>
-            <div>CarrinhoS</div>
-        </body>
+        <div>
+            <Head><title>Catalogo Marcadores</title></Head>
+            <SearchBar/>
+            <div></div>
+            <FooterBar/>
+        </div>
     );
 } 
 export default CarrinhoS

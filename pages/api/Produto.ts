@@ -34,7 +34,7 @@ export default async (req:NextApiRequest, res:NextApiResponse) => {
             const Valores=[]
             for(const i in ListaCalled.GetProduto()){
               const Ql:any=ListaCalled.GetProduto()[i]
-              if(Ql["NOME"].search(IBS)!=-1 && Ql["QUANTIDADE"]>0){
+              if(Ql["QUANTIDADE"]>0 && (Ql["NOME"].toUpperCase()).includes(IBS)){
                 Valores.push(Ql)
               }
             }
