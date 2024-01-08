@@ -63,14 +63,14 @@ const Search:React.FC=()=>{
 } 
 export default Search
 
-interface CatalogoProps {search: string | null;}
-export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
-  const { query } = context;
-  const search: string | null = query.search || null;
+// interface CatalogoProps {search: string | null;}
+// export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
+//   const { query } = context;
+//   const search: string | null = query.search || null;
 
-  return {
-    props: {
-        search,
-    },
-  };
-}
+//   return {
+//     props: {
+//         search,
+//     },
+//   };
+// }

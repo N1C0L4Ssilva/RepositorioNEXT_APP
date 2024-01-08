@@ -60,15 +60,15 @@ const Catalogo:React.FC=()=>{
     </div>
   );
 }
-// interface CatalogoProps {marker: string | null;}
-// export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
-//   const { query } = context;
-//   const marker: string | null = query.MARKER || null;
+interface CatalogoProps {marker: string | null;}
+export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
+  const { query } = context;
+  const marker: string | null = query.MARKER || null;
 
-//   return {
-//     props: {
-//       marker,
-//     },
-//   };
-// }
+  return {
+    props: {
+      marker,
+    },
+  };
+}
 export default Catalogo
