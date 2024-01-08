@@ -10,10 +10,10 @@ import { useEffect, useState } from "react";
 
 const Catalogo:React.FC=()=>{
   const router = useRouter();
-  let valorRecebido: string|string[]| null|undefined=router.query.MARKER
+  let valorRecebido: string|string[]| null|undefined=router.query.MARKER || ""
   const [ITENS,setITENS]=useState<string[]>([])
   useEffect(() => {
-    valorRecebido=router.query.MARKER
+    valorRecebido=router.query.MARKER || ""
     if(valorRecebido){
       fetch(`/api/Produto?${stringify({
         TYPEFIND:'ITEM_BY_MARKER',
@@ -34,7 +34,7 @@ const Catalogo:React.FC=()=>{
         setITENS(ItensSaveMoment)
       })
     }
-  },[])
+  },[router.query])
   return(
     <div>
       <Head><title>Catalogo de {valorRecebido}</title></Head>
@@ -59,16 +59,5 @@ const Catalogo:React.FC=()=>{
       <FooterBar/>
     </div>
   );
-}
-interface CatalogoProps {marker: string | null;}
-export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
-  const { query } = context;
-  const marker: string | null = query.MARKER || null;
-
-  return {
-    props: {
-      marker,
-    },
-  };
 }
 export default Catalogo

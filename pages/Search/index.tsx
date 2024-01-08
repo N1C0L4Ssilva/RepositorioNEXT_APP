@@ -11,10 +11,10 @@ import CardCatalogo from "../../components/card-catalogo";
 
 const Search:React.FC=()=>{
     const router = useRouter();
-    let valorRecebido: string|string[]| null|undefined=router.query.SEARCH
+    let valorRecebido: string|string[]| null|undefined=router.query.SEARCH || ""
     const [ITENS,setITENS]=useState<string[]>([])
     useEffect(() => {
-        valorRecebido=router.query.SEARCH
+        valorRecebido=router.query.SEARCH || ""
         if(valorRecebido){
         fetch(`/api/Produto?${stringify({
             TYPEFIND:"ITEM_BY_SEARCH",
@@ -35,7 +35,7 @@ const Search:React.FC=()=>{
             setITENS(ItensSaveMoment)
         })
         }
-    },[router.query.SEARCH])
+    },[router.query])
     return(
         <div>
             <Head><title>Pesquisar {valorRecebido}</title></Head>
@@ -62,15 +62,3 @@ const Search:React.FC=()=>{
     );
 } 
 export default Search
-
-// interface CatalogoProps {search: string | null;}
-// export async function getServerSideProps(context:any): Promise<{ props: CatalogoProps }> {
-//   const { query } = context;
-//   const search: string | null = query.search || null;
-
-//   return {
-//     props: {
-//         search,
-//     },
-//   };
-// }
