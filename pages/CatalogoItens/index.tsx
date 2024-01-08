@@ -72,44 +72,4 @@ export async function getServerSideProps(context:any): Promise<{ props: Catalogo
     },
   };
 }
-export default Catalogo
-
-/* SCRIPT
-  async ngOnInit(){
-    if(this.valorRecebido){
-      this.Service.GET(`Produto/?${
-        new URLSearchParams({
-          TYPEFIND:"ITEM_BY_MARKER",
-          ITEM_BY_MARKER:this.valorRecebido
-        }).toString()
-      }`).then((v)=>{
-        for(const i in v){
-          if(!this.ITENS.find((Test)=>{return Test.ID==v[i].MARCA})){
-            this.ITENS.push({
-              ID:v[i].MARCA,
-              ITENS:[]
-            })
-          }
-          const LST=this.ITENS.find((Test)=>{return Test.ID==v[i].MARCA})
-          LST.ITENS.push(v[i])
-        }
-      })
-    }
-  }
-*/
-
-/* HTML
-
-<section *ngFor="let Mrk of ITENS" className={style.Result}>
-    <h3 className={style.TituloMarker}>{{Mrk.ID}}</h3>
-    <div className={style.Catalogo}>
-        <app-card-catalogo *ngFor="let I of Mrk.ITENS"
-            Nom={I.NOME}
-            Dec={I.DESCRCAO}
-            Val={I.VALOR}
-            Tag={I.TAGS}
-            ID={I.ID}
-        ></app-card-catalogo>
-    </div>
-</section>
-*/
+export default CatalogoItens
