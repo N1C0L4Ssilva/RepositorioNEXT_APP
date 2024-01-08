@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: {children: React.ReactNode}) {
   if (typeof window === 'undefined') {
     new ObterDadosInicio().Iniciar()
-    console.log('Lado do servidor iniciado');
   }
   return (
     <html lang="en">
