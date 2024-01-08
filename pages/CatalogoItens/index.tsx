@@ -8,7 +8,7 @@ import FooterBar from "../../components/footer-bar";
 import CardCatalogo from "../../components/card-catalogo";
 import { useEffect, useState } from "react";
 
-const Catalogo:React.FC=()=>{
+const CatalogoItens:React.FC=()=>{
   const router = useRouter();
   const {MARKER}=router.query
   let valorRecebido: string|string[]| null|undefined=router.query.MARKER
