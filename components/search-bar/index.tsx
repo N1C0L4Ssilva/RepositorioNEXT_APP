@@ -9,12 +9,12 @@ const searchbar:React.FC=()=>{
                 <input id="InputSearch" type="text"/>
                 <div></div>
             </div>
-            <Link href="" className={style.Carrinho}>
+             <div className={style.Carrinho}>
                 <input type="checkbox" name="" id=""/>
                 <div></div>
-            </Link>
+            </div>
             <Link href="/Marker" className={style.Home}>
-                <div></div>
+                    <div></div>
             </Link>
             <div className={style.BotoesConta}>
                 <button>CONTA</button>

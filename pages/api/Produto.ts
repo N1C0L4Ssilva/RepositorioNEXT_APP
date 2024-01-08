@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import {ListaCalled} from "./Lista-Itens";
 import ObterDadosInicio from "./ObterDadosInicio";
-
 new ObterDadosInicio().Iniciar();
 
 export default async (req:NextApiRequest, res:NextApiResponse) => {
@@ -16,7 +15,6 @@ export default async (req:NextApiRequest, res:NextApiResponse) => {
                 Valores.push(Ql["MARKADOR"])
               }
             }
-            console.log(Valores,"VALORES")
             return res.status(200).json(Valores)
 
           }else if(req.query.TYPEFIND=="ITEM_BY_MARKER"){

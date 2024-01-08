@@ -1,0 +1,55 @@
+.Card{
+    width: calc(50% - 20px);
+    min-width: 500px;
+    height: 120px;
+    margin: 10px;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+}
+.Card img{
+    margin: 5px;
+    width: 110px;
+    height: 110px;
+    background-color: #8F8F8F;
+}
+.Card > div{width: calc(100% - 125px);}
+.Card > div > *{
+    width: 100%;
+    margin: 9px 0px;
+    background-color: #8F8F8F;
+    color: white;
+} 
+.Card > div > .UnicBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Card > div > .Vlr{
+    display: flex;
+    position: relative;
+    background-color: #F3F3F3;}
+.Card > div > .Vlr div{
+    width: calc(80% - 5px);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #8F8F8F;
+    color: white;
+
+}
+.Card > div > .Vlr button{
+    position: absolute;
+    right: 2px;
+    border: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #24Ff13;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.Apagar{
+    display: none;
+}

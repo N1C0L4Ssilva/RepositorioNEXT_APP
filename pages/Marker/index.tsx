@@ -3,6 +3,7 @@ import style from "./style.module.css"
 import SearchBar from "../../components/search-bar"
 import FooterBar from '../../components/footer-bar';
 import Head from 'next/head';
+import Link from 'next/link';
 const Marker:React.FC=()=>{
     const [MARCADORES, setMARCADORES] = useState<string[]>(["."]);
     useEffect(() => {
@@ -12,9 +13,7 @@ const Marker:React.FC=()=>{
     },[])
     return(
         <div>
-            <Head>
-                <title>MARKER</title>
-            </Head>
+            <Head><title>Catalogo Marcadores</title></Head>
             <SearchBar/>
             <div className={style.Catalogo}>
                 <div className={style.MarkerCatalogo}>
@@ -25,7 +24,7 @@ const Marker:React.FC=()=>{
                         <img src="../../public/NoItem.png" alt="" />
                         <span className={style.TextoSeNaoImg}></span>
                         <span className={style.Titulo}>{I}</span>
-                        <a>Ver Produtos</a>
+                        <Link href={`/Catalogo?MARKER=${I}`}>Ver Produtos</Link>
                         </div>
                     ))}
                     </div>
