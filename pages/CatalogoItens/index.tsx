@@ -8,7 +8,7 @@ import FooterBar from "../../components/footer-bar";
 import CardCatalogo from "../../components/card-catalogo";
 import { useEffect, useState } from "react";
 
-const Catalogo:React.FC=()=>{
+const CatalogoItens:React.FC=()=>{
   const router = useRouter();
   let valorRecebido: string|string[]| null|undefined=router.query.MARKER
   // const [ITENS,setITENS]=useState<string[]>([])
@@ -65,6 +65,7 @@ const Catalogo:React.FC=()=>{
 //   const { query } = context;
 //   const marker: string | null = query.MARKER || null;
 
+<<<<<<< HEAD:pages/Catalogo/index.tsx
 //   return {
 //     props: {
 //       marker,
@@ -112,3 +113,12 @@ export default Catalogo
     </div>
 </section>
 */
+=======
+  return {
+    props: {
+      marker,
+    },
+  };
+}
+export default CatalogoItens
+>>>>>>> 4aa24606b99d2283d0353d5961d677804db7df08:pages/CatalogoItens/index.tsx
